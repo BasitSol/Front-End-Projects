@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator glassmorphism">
+            <div class="header">
+                <i class="fas fa-calculator"></i>
+                <h1>Age Calculator</h1>
+                <p>Discover your exact age in years, months, and days</p>
+            </div>
+            
+            <div class="input-group glassmorphism">
+                <input type="date" id="date" required>
+                <button onclick="calculateAge()" class="cta-button">
+                    Calculate Age
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div id="result" class="result-box"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
