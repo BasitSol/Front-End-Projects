@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <div class="input-group">
+            <input type="text" id="qr-input" placeholder="Enter URL or text...">
+        </div>
+        <button id="generate-btn">Generate QR Code</button>
+        <div class="qr-container">
+            <div id="qr-code" class="qr-code"></div>
+        </div>
+        <a href="#" class="download-btn" id="download-btn" download="qrcode.png">Download QR Code</a>
+        <p class="footer">QR codes are generated client-side. No data is stored.</p>
+    </div>
+</body>
+</html>
