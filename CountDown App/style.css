@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.timer-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.label {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.colon {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-top: -15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.time-input {
+    width: 70px;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.control-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.start-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.start-btn:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--secondary-color);
+    width: 0%;
+    transition: width 0.5s linear;
+}
+
+@media (max-width: 480px) {
+    .time {
+        font-size: 2em;
+        min-width: 80px;
+        padding: 10px 15px;
+    }
+    
+    .time-input {
+        width: 60px;
+        padding: 10px;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+    }
+}
