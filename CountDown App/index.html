@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Countdown Timer</h1>
+            <div class="timer-display">
+                <div class="time-block">
+                    <div class="time" id="days">00</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-block">
+                    <div class="time" id="hours">00</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-block">
+                    <div class="time" id="minutes">00</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="colon">:</div>
+                <div class="time-block">
+                    <div class="time" id="seconds">00</div>
+                    <div class="label">Seconds</div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="number" id="daysInput" placeholder="D" min="0" class="time-input">
+                <input type="number" id="hoursInput" placeholder="H" min="0" max="23" class="time-input">
+                <input type="number" id="minutesInput" placeholder="M" min="0" max="59" class="time-input">
+                <input type="number" id="secondsInput" placeholder="S" min="0" max="59" class="time-input">
+            </div>
+            <div class="control-group">
+                <button class="btn start-btn" onclick="startTimer()">Start</button>
+                <button class="btn reset-btn" onclick="resetTimer()">Reset</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
